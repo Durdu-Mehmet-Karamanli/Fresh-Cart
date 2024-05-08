@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en" class="box-border">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="https://freshcart.codescandy.com/assets/images/favicon/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="app.js"></script>
+    <title>Fresh Cart</title>
+</head>
+<body>
+    <nav class="w-full lg:py-5 py-3 border-b ">
+        <div class="flex items-center justify-between w-full px-4 ">
+            <div class="flex columns-auto items-center">
+        <a href="javascript:;" onclick="offCanvas('indent-offCanvas')"><img src="svgico/indentright.svg" alt="" class="col-auto min-h-[28px] min-w-[28px]"></a>
+       <a href="" class="max-[992px]:hidden"><img src="images/freshcart-logo.svg" alt="" class="columns-auto pl-4 pr-8"></a>
+       <div class="columns-5xl ">
+        <a href="" class="min-[993px]:hidden flex justify-center"><img src="images/freshcart-logo.svg" alt="" class="col-auto pl-4 pr-8"></a>
+        <div class="relative w-11/12 max-[992px]:hidden">
+       <input type="search" value="" placeholder="Search for products" class="w-full py-2 px-3 rounded-lg border-solid border-x border-y border-gray-200 focus:outline-none focus:border-[#85d685] focus:shadow-[0_0_0_0.25rem_rgba(10,173,10,.25)]">
+       <a href="" class="absolute top-3 right-3"><img src="svgico/search.svg" alt=""></a>
+    </div>
+    </div>
+    </div>
+       <div class="flex columns-auto gap-6">
+           <a href="" class="max-[992px]:hidden">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#9aa4ab">
+                <path d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Zm0-108q96-86 158-147.5t98-107q36-45.5 50-81t14-70.5q0-60-40-100t-100-40q-47 0-87 26.5T518-680h-76q-15-41-55-67.5T300-774q-60 0-100 40t-40 100q0 35 14 70.5t50 81q36 45.5 98 107T480-228Zm0-273Z"/>
+              </svg>
+        </a>
+           <a href="javascript:;" onclick="modal('map-modal')" class="max-[992px]:hidden">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#9aa4ab"><path d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"/></svg>
+        </a>
+           <a href="javascript:;" onclick="modal('login-modal')">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#9aa4ab"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg>
+        </a>
+           <a href="javascript:;" onclick="offCanvas('shopping-offCanvas')">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#9aa4ab"><path d="M240-80q-33 0-56.5-23.5T160-160v-480q0-33 23.5-56.5T240-720h80q0-66 47-113t113-47q66 0 113 47t47 113h80q33 0 56.5 23.5T800-640v480q0 33-23.5 56.5T720-80H240Zm0-80h480v-480h-80v80q0 17-11.5 28.5T600-520q-17 0-28.5-11.5T560-560v-80H400v80q0 17-11.5 28.5T360-520q-17 0-28.5-11.5T320-560v-80h-80v480Zm160-560h160q0-33-23.5-56.5T480-800q-33 0-56.5 23.5T400-720ZM240-160v-480 480Z"/></svg>
+        </a>
+    </div>
+</div>
+    </nav>
+
+
+    <!-- Shopping offCanvas Start-->
+    <div class="offCanvas" id="shopping-offCanvas">
+        <div class="offCanvas-content">
+            <div class="border-b absolute top-[5.75rem] left-0 w-full"></div>
+            <div class="flex justify-between items-center">
+                <div class="col-auto">
+                <h2 class="font-semibold text-2xl text-[#262424e6]">Shop Cart</h2>
+                <p class="text-sm text-[#52535399]">Location in 382480</p>
+            </div>
+               <a href="" class=""><span class="btn btn-close hover:rounded-sm hover:border-[#0aad0a] hover:outline-none hover:shadow-[0_0_0_0.25rem_rgba(10,173,10,.25)]" onclick="modal('login-modal')"></span></a>
+            </div>
+            <div class="flex col-auto mt-10">
+                <div class="alert-danger w-full h-auto p-2 rounded-lg">
+                    <p class="text-base font-normal">You've got FREE delivery. Start <a href="" class="alert-link">checkout now!</a></p>
+                </div>
+            </div>
+                    <div class="flex col-auto mt-5 justify-start items-center  border-t border-solid">
+                <div class="pt-4 flex">
+                <img src="images/product-img-1.jpg" alt="" class="items-center h-20 w-20">
+                <div class="col-auto ml-2">
+                   <a href=""><h6 class="text-base text-[#21313c] font-semibold">Haldiram's Sev Bhujia</h6></a>
+                   <span class=" text-[.875em] text-[#5c6c75bf] text-start items-start">.98 / lb</span>
+                    <a href="" class="flex flex-row items-center text-[#5c6c75bf] text-xs mt-2"><span class="mr-1"><svg xmlns="http://www.w3.org/2000/svg" height="14px" viewBox="0 -960 960 960" width="14px" fill="#0aad0a"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg></span>Remove</a>
+                 </div>
+             </div>
+
+            <div class="flex col-auto ml-8 items-center pl-8 pr-8">
+                <input type="button" value="-" class="btn-sm cursor-pointer rounded-s-sm w-8 h-9 text-center border-solid border border-[#ecf0ef]">
+                <input type="text"   value="0"  class=" w-8 min-h-8 h-9 outline-none text-center border-solid border-t border-b border-[#ecf0ef]">
+                <input type="button" value="+" class="btn-sm cursor-pointer rounded-e-sm w-8 h-9 text-center border-solid border border-[#ecf0ef]">
+            </div>
+            <div class="col-auto items-center text-center">
+                <p class="font-bold ml-16">$5.00</p>
+            </div>
+                    </div>
+                    <div class="flex col-auto mt-5 justify-start items-center  border-t border-solid">
+            <div class="pt-4 flex">
+            <img src="images/product-img-2.jpg" alt="" class="items-center h-20 w-20">
+            <div class="col-auto ml-2">
+               <a href=""><h6 class="text-base text-[#21313c] font-semibold">NutriChoice Digestive</h6></a>
+               <span class=" text-[.875em] text-[#5c6c75bf] text-start items-start">250g</span>
+                <a href="" class="flex flex-row items-center text-[#5c6c75bf] text-xs mt-2"><span class="mr-1"><svg xmlns="http://www.w3.org/2000/svg" height="14px" viewBox="0 -960 960 960" width="14px" fill="#0aad0a"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg></span>Remove</a>
+             </div>
+         </div>
+
+        <div class="flex col-auto ml-8 items-center pl-8 pr-8">
+            <input type="button" value="-" class="btn-sm cursor-pointer rounded-s-sm w-8 h-9 text-center border-solid border border-[#ecf0ef]">
+            <input type="text"   value="0"  class=" w-8 min-h-8 h-9 outline-none text-center border-solid border-t border-b border-[#ecf0ef]">
+            <input type="button" value="+" class="btn-sm cursor-pointer rounded-e-sm w-8 h-9 text-center border-solid border border-[#ecf0ef]">
+        </div>
+        <div class="col-auto items-center text-center">
+            <p class="font-bold ml-16 text-[#e45050]">$20.00</p>
+            <p class="text-[#52535399] line-through ml-16">$26.00</p>
+        </div>
+                            </div>
+                            <div class="flex col-auto mt-5 justify-start items-center  border-t border-solid">
+                                <div class="pt-4 flex">
+                                <img src="images/product-img-4.jpg" alt="" class="items-center h-20 w-20">
+                                <div class="col-auto ml-2 max-w-[145px]">
+                                   <a href=""><h6 class="text-base text-[#21313c] font-semibold flex-shrink">Cadbury 5 Star Chocolatte</h6></a>
+                                   <span class=" text-[.875em] text-[#5c6c75bf] text-start items-start">1kg</span>
+                                    <a href="" class="flex flex-row items-center text-[#5c6c75bf] text-xs mt-2"><span class="mr-1"><svg xmlns="http://www.w3.org/2000/svg" height="14px" viewBox="0 -960 960 960" width="14px" fill="#0aad0a"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg></span>Remove</a>
+                                 </div>
+                             </div>        
+            <div class="flex col-auto ml-8 items-center pl-8 pr-8">
+                                <input type="button" value="-" class="btn-sm cursor-pointer rounded-s-sm w-8 h-9 text-center border-solid border border-[#ecf0ef]">
+                                <input type="text"   value="0"  class=" w-8 min-h-8 h-9 outline-none text-center border-solid border-t border-b border-[#ecf0ef]">
+                                <input type="button" value="+" class="btn-sm cursor-pointer rounded-e-sm w-8 h-9 text-center border-solid border border-[#ecf0ef]">
+            </div>
+            <div class="col-auto items-center text-center">
+                                <p class="font-bold ml-16 ">$15.00</p>
+                                <p class="text-[#52535399] line-through ml-16">$20.00</p>
+            </div>
+            </div>
+            <div class="flex col-auto mt-5 justify-start items-center  border-t border-solid">
+    <div class="pt-4 flex">
+    <img src="images/product-img-1.jpg" alt="" class="items-center h-20 w-20">
+    <div class="col-auto ml-2">
+       <a href=""><h6 class="text-base text-[#21313c] font-semibold">Haldiram's Sev Bhujia</h6></a>
+       <span class=" text-[.875em] text-[#5c6c75bf] text-start items-start">.98 / lb</span>
+        <a href="" class="flex flex-row items-center text-[#5c6c75bf] text-xs mt-2"><span class="mr-1"><svg xmlns="http://www.w3.org/2000/svg" height="14px" viewBox="0 -960 960 960" width="14px" fill="#0aad0a"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg></span>Remove</a>
+     </div>
+ </div>
+
+<div class="flex col-auto ml-8 items-center pl-8 pr-8">
+    <input type="button" value="-" class="btn-sm cursor-pointer rounded-s-sm w-8 h-9 text-center border-solid border border-[#ecf0ef]">
+    <input type="text"   value="0"  class=" w-8 min-h-8 h-9 outline-none text-center border-solid border-t border-b border-[#ecf0ef]">
+    <input type="button" value="+" class="btn-sm cursor-pointer rounded-e-sm w-8 h-9 text-center border-solid border border-[#ecf0ef]">
+</div>
+<div class="col-auto items-center text-center">
+    <p class="font-bold ml-16">$35.00</p>
+    <p class="text-[#52535399] line-through ml-16">$20.00</p>
+</div>
+            </div>
+            <div class="flex col-auto mt-5 justify-start items-center  border-t border-solid">
+    <div class="pt-4 flex">
+    <img src="images/product-img-2.jpg" alt="" class="items-center h-20 w-20">
+    <div class="col-auto ml-2">
+       <a href=""><h6 class="text-base text-[#21313c] font-semibold">NutriChoice Digestive</h6></a>
+       <span class=" text-[.875em] text-[#5c6c75bf] text-start items-start">.98 / lb</span>
+        <a href="" class="flex flex-row items-center text-[#5c6c75bf] text-xs mt-2"><span class="mr-1"><svg xmlns="http://www.w3.org/2000/svg" height="14px" viewBox="0 -960 960 960" width="14px" fill="#0aad0a"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg></span>Remove</a>
+     </div>
+ </div>
+
+<div class="flex col-auto ml-8 items-center pl-8 pr-8">
+    <input type="button" value="-" class="btn-sm cursor-pointer rounded-s-sm w-8 h-9 text-center border-solid border border-[#ecf0ef]">
+    <input type="text"   value="0"  class=" w-8 min-h-8 h-9 outline-none text-center border-solid border-t border-b border-[#ecf0ef]">
+    <input type="button" value="+" class="btn-sm cursor-pointer rounded-e-sm w-8 h-9 text-center border-solid border border-[#ecf0ef]">
+</div>
+<div class="col-auto items-center text-center">
+    <p class="font-bold ml-16">$25.00</p>
+    <p class="text-[#52535399] line-through ml-16">$20.00</p>
+</div>
+            </div>
+            <div class="flex justify-between border-t mt-4 pt-4">
+                <button class="btn btn-primary hover:bg-[#54a754]">Contiune Shopping</button>
+                <button class="btn btn-dark hover:bg-[#2e3538]">Update Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shopping offCanvas End-->
+
+    <!-- İndent offCanvas Start-->
+    <div class="offCanvas justify-start " id="indent-offCanvas">
+        <div class="offCanvas-content min-w-[21rem] rounded-e rounded-s">
+            <div class="flex justify-between items-center">
+                <div class="col-auto">
+                    <a href=""><img src="images/freshcart-logo.svg" alt="" class="columns-auto pl-4 pr-8"></a>
+            </div>
+               <a href="" class=""><span class="btn btn-close hover:rounded-sm hover:border-[#0aad0a] hover:outline-none hover:shadow-[0_0_0_0.25rem_rgba(10,173,10,.25)]" onclick="modal('login-modal')"></span></a>
+            </div>
+            <div class="mt-4">
+                <input type="text" placeholder="Search your area" class=" mt-0 form-input focus:outline-none focus:border-[#85d685] focus:shadow-[0_0_0_0.25rem_rgba(10,173,10,.25)]">
+                <button class="btn text-[#9aa4ab] flex justify-center items-center mt-2 w-full border-solid border-gray-400 hover:bg-gray-300 font-semibold"><i><svg class="icon" xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" fill="#9aa4ab"><path d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"/></svg></i> Pick Location</button>
+            </div>
+            <button class="btn btn-primary flex justify-center items-center w-full mt-4"><i class="mr-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+            </svg></i>All Departments</button>
+            <div class="mt-4">
+                <ul class="flex flex-col">
+                    <li class="border-b" id="dropdown">
+                        <a href="#" onclick="toggleDropdown()" class="hover:text-[#0aad0a] flex flex-row justify-between hover:transition-all w-full">Home
+                         <i><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5c6c75"><path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/></svg></i></a>
+                         <div id="dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                          </div>
+                        </li>
+                        
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+    
+    <!-- İndent offCanvas End-->
+
+    <!-- Person Modal Start-->
+    <div class="modal" id="login-modal">
+        <div class="modal-content flex flex-col gap-10">
+            <div class="flex justify-between items-center">
+                <h2 class="font-bold text-2xl">Sign Up</h2>
+               <a href="" class=""><span class="btn btn-close hover:rounded-sm hover:border-[#0aad0a] hover:outline-none hover:shadow-[0_0_0_0.25rem_rgba(10,173,10,.25)]" onclick="modal('login-modal')"></span></a>
+            </div>
+            <div class="flex flex-col">
+                <label class="text-[#3d4f58] flex flex-col mb-2">Name</label>
+                <input type="text" placeholder="Enter your Name" class="form-input focus:outline-none focus:border-[#85d685] focus:shadow-[0_0_0_0.25rem_rgba(10,173,10,.25)]">
+                <label class="text-[#3d4f58] flex flex-col mb-2 mt-3">Email address</label>
+                <input type="text" placeholder="Enter Email Address" class="form-input focus:outline-none focus:border-[#85d685] focus:shadow-[0_0_0_0.25rem_rgba(10,173,10,.25)]">
+                <label class="text-[#3d4f58] flex flex-col mb-2 mt-3">Password</label>
+                <input type="text" placeholder="Enter Password" class="form-input focus:outline-none focus:border-[#85d685] focus:shadow-[0_0_0_0.25rem_rgba(10,173,10,.25)]">
+                <span class="text-sm mt-1 text-[#889397]">By Signup, you agree to our <a href="" class="text-[#0aad0a]">Terms of Service</a> & <a href="" class="text-[#0aad0a]">Privacy Policy</a></span>
+                <button class="btn btn-primary mt-6 w-1/4 text-[0.875rem] font-semibold">Sign Up</button>
+                <p class="text-center mt-12">Already have an account? <a href="" class="text-[#0aad0a]">Sign In</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- Person Modal End-->
+
+    <!-- Map Modal Start-->
+    <div class="modal" id="map-modal">
+        <div class="modal-content flex flex-col gap-6 ">
+            <div class="flex justify-between items-center">
+                <h2 class="font-semibold text-base">Choose Your Delivery Location
+                    <span><p class="text-sm font-thin">Enter your address and we will specify the offer you area</p></span>
+                </h2>
+               <a href=""><span class="btn btn-close hover:rounded-sm hover:border-[#0aad0a] hover:outline-none hover:shadow-[0_0_0_0.25rem_rgba(10,173,10,.25)]" onclick="modal('login-modal')"></span></a>
+            </div>
+            <div class="flex flex-col ">
+                <input type="text" placeholder="Search your area" class=" mt-0 form-input focus:outline-none focus:border-[#85d685] focus:shadow-[0_0_0_0.25rem_rgba(10,173,10,.25)]">
+                <div class="flex flex-row justify-between mt-5 items-center">
+                    <h3>Select Location</h3>
+                    <button class="btn border-solid border-gray-400 hover:bg-gray-300">Clear All</button>
+                </div>
+                <div class="flex flex-col overflow-auto mt-2 max-h-[300px]">
+                    <div class=" hover:bg-gray-100">
+                        <a href="" class="flex flex-row justify-between border-b border-t p-3 px-1">
+                            <span>Alabama</span>
+                            <span>Min:$20</span>
+                        </a>
+                    </div>
+                    <div class="hover:bg-gray-100">
+                        <a href="" class="flex flex-row justify-between border-b border-t p-3 px-1">
+                            <span>Alaska</span>
+                            <span>Min:$30</span>
+                        </a>
+                    </div>
+                    <div class="hover:bg-gray-100">
+                        <a href="" class="flex flex-row justify-between border-b border-t p-3 px-1">
+                            <span>Arizona</span>
+                            <span>Min:$50</span>
+                        </a>
+                    </div>
+                    <div class="hover:bg-gray-100">
+                        <a href="" class="flex flex-row justify-between border-b border-t p-3 px-1">
+                            <span>California</span>
+                            <span>Min:$29</span>
+                        </a>
+                    </div>
+                    <div class="hover:bg-gray-100">
+                        <a href="" class="flex flex-row justify-between border-b border-t p-3 px-1">
+                            <span>Colorado</span>
+                            <span>Min:$80</span>
+                        </a>
+                    </div>
+                    <div class="hover:bg-gray-100">
+                        <a href="" class="flex flex-row justify-between border-b border-t p-3 px-1">
+                            <span>Florida</span>
+                            <span>Min:$90</span></a>
+                    </div>
+                    <div class="hover:bg-gray-100">
+                        <a href="" class="flex flex-row justify-between border-b border-t p-3 px-1">
+                            <span>Arizona</span>
+                            <span>Min:$50</span></a>
+                    </div>
+                    <div class="hover:bg-gray-100">
+                        <a href="" class="flex flex-row justify-between border-b border-t p-3 px-1">
+                            <span>California</span>
+                            <span>Min:$29</span></a>
+                    </div>
+                    <div class="hover:bg-gray-100">
+                        <a href="" class="flex flex-row justify-between border-b border-t p-3 px-1">
+                            <span>Florida</span>
+                            <span>Min:$90</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Map Modal End-->
+
+
+
+
+
+
+    
+</body>
+</html>
