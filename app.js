@@ -1,13 +1,31 @@
 function modal(id){
     document.getElementById(id).classList.toggle('modal-active');
+    let offbtn3 = document.getElementById('off3');
+    offbtn3.addEventListener('click', function(event) {
+      document.getElementById(id).classList.remove('modal-active');
+    });
+    let offbtn4 = document.getElementById('off4');
+    offbtn4.addEventListener('click', function(event) {
+      document.getElementById(id).classList.remove('modal-active');
+    });
     window.onclick = function(event) {
     if (event.target == document.getElementById(id)) {
     document.getElementById(id).classList.remove('modal-active');
     }
 }
 }
+   
+
 function offCanvas(id){
     document.getElementById(id).classList.toggle('offCanvas-active');
+    let offbtn = document.getElementById('off');
+    offbtn.addEventListener('click', function(event) {
+      document.getElementById(id).classList.remove('offCanvas-active');
+    });
+    let offbtn2 = document.getElementById('off2');
+    offbtn2.addEventListener('click', function(event) {
+      document.getElementById(id).classList.remove('offCanvas-active');
+    });
     window.onclick = function(event) {
     if (event.target == document.getElementById(id)) {
     document.getElementById(id).classList.remove('offCanvas-active');
