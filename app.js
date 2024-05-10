@@ -15,23 +15,37 @@ function offCanvas(id){
 }
 }
 function toggleDropdown(index) {
-    var dropdown = document.getElementById(`dropdown-content-${index}`);
-    if (dropdown.style.display === "block") {
+  var dropdowns = document.querySelectorAll('[id^="dropdown-content-"]');
+  var currentDropdown = document.getElementById(`dropdown-content-${index}`);
+  dropdowns.forEach((dropdown) => {
+    if (dropdown!== currentDropdown) {
       dropdown.style.display = "none";
-    } else {
-      dropdown.style.display = "block";
-    }
-  }
-  const buttons = document.querySelectorAll('input[type="button"]');
-const inputField = document.querySelector('input[type="text"]');
-
-buttons.forEach((button) => {
-  button.addEventListener('click', () => {
-    const currentValue = parseInt(inputField.value);
-    if (button.value === '-') {
-      inputField.value = Math.max(currentValue - 1, 0);
-    } else {
-      inputField.value = currentValue + 1;
     }
   });
+  if (currentDropdown.style.display === "block") {
+    currentDropdown.style.display = "none";
+  } else {
+    currentDropdown.style.display = "block";
+  }
+}
+  const decrementButtons = document.querySelectorAll('.decrement');
+const incrementButtons = document.querySelectorAll('.increment');
+const valueInputs = document.querySelectorAll('.value');
+
+decrementButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+        let currentValue = parseInt(valueInputs[index].value);
+        if (currentValue > 0) {
+            currentValue--;
+            valueInputs[index].value = currentValue;
+        }
+    });
+});
+
+incrementButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+        let currentValue = parseInt(valueInputs[index].value);
+        currentValue++;
+        valueInputs[index].value = currentValue;
+    });
 });
