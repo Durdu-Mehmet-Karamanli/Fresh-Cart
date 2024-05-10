@@ -14,11 +14,24 @@ function offCanvas(id){
     }
 }
 }
-function toggleDropdown() {
-    var dropdown = document.getElementById("dropdown-content");
+function toggleDropdown(index) {
+    var dropdown = document.getElementById(`dropdown-content-${index}`);
     if (dropdown.style.display === "block") {
       dropdown.style.display = "none";
     } else {
       dropdown.style.display = "block";
     }
   }
+  const buttons = document.querySelectorAll('input[type="button"]');
+const inputField = document.querySelector('input[type="text"]');
+
+buttons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const currentValue = parseInt(inputField.value);
+    if (button.value === '-') {
+      inputField.value = Math.max(currentValue - 1, 0);
+    } else {
+      inputField.value = currentValue + 1;
+    }
+  });
+});

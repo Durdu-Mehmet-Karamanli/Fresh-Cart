@@ -6,7 +6,6 @@
     <link rel="shortcut icon" type="image/x-icon" href="https://freshcart.codescandy.com/assets/images/favicon/favicon.ico">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="app.js"></script>
     <title>Fresh Cart</title>
 </head>
 <body>
@@ -168,15 +167,16 @@
 
     <!-- İndent offCanvas Start-->
     <div class="offCanvas justify-start " id="indent-offCanvas">
-        <div class="offCanvas-content min-w-[21rem] rounded-e rounded-s">
+        <div class="offCanvas-content min-w-[21rem] max-[992px]:w-[540px] rounded-e rounded-s">
             <div class="flex justify-between items-center">
                 <div class="col-auto">
                     <a href=""><img src="images/freshcart-logo.svg" alt="" class="columns-auto pl-4 pr-8"></a>
             </div>
                <a href="" class=""><span class="btn btn-close hover:rounded-sm hover:border-[#0aad0a] hover:outline-none hover:shadow-[0_0_0_0.25rem_rgba(10,173,10,.25)]" onclick="modal('login-modal')"></span></a>
             </div>
-            <div class="mt-4">
-                <input type="text" placeholder="Search your area" class=" mt-0 form-input focus:outline-none focus:border-[#85d685] focus:shadow-[0_0_0_0.25rem_rgba(10,173,10,.25)]">
+            <div class="mt-4 relative">
+                <input type="search" value="" placeholder="Search for products" class="w-full py-2 px-3 rounded-lg border-solid border-x border-y border-gray-200 focus:outline-none focus:border-[#85d685] focus:shadow-[0_0_0_0.25rem_rgba(10,173,10,.25)]">
+                <a href="" class="absolute top-3 right-3"><img src="svgico/search.svg" alt=""></a>
                 <button class="btn text-[#9aa4ab] flex justify-center items-center mt-2 w-full border-solid border-gray-400 hover:bg-gray-300 font-semibold"><i><svg class="icon" xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" fill="#9aa4ab"><path d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"/></svg></i> Pick Location</button>
             </div>
             <button class="btn btn-primary flex justify-center items-center w-full mt-4"><i class="mr-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid">
@@ -187,15 +187,115 @@
             </svg></i>All Departments</button>
             <div class="mt-4">
                 <ul class="flex flex-col">
-                    <li class="border-b" id="dropdown">
-                        <a href="#" onclick="toggleDropdown()" class="hover:text-[#0aad0a] flex flex-row justify-between hover:transition-all w-full">Home
+                     <li class="border-b p-3" id="dropdown">
+                        <a href="#" onclick="toggleDropdown(1)" class="hover:text-[#0aad0a] flex flex-row justify-between hover:transition-all w-full">Home
                          <i><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5c6c75"><path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/></svg></i></a>
-                         <div id="dropdown-content">
-                            <a href="#">Link 1</a>
-                            <a href="#">Link 2</a>
-                            <a href="#">Link 3</a>
+                         <div id="dropdown-content-1" class="dropdowns-content">
+                            <a href="#" class="hover:bg-[#f0f3f2]">Home 1</a>
+                            <a href="#" class="hover:bg-[#f0f3f2]">Home 2</a>
+                            <a href="#" class="hover:bg-[#f0f3f2]">Home 3</a>
+                            <a href="#" class="hover:bg-[#f0f3f2]">Home 4</a>
+                            <a href="#" class="hover:bg-[#f0f3f2]">Home 5</a>
                           </div>
                         </li>
+                        <li class="border-b p-3" id="dropdown">
+                            <a href="#" onclick="toggleDropdown(2)" class="hover:text-[#0aad0a] flex flex-row justify-between hover:transition-all w-full">Shop
+                             <i><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5c6c75"><path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/></svg></i></a>
+                             <div id="dropdown-content-2" class="dropdowns-content">
+                                <a href="#" class="hover:bg-[#f0f3f2]">Shop Grid - Filter</a>
+                                <a href="#" class="hover:bg-[#f0f3f2]">Shop Grid - 3 column</a>
+                                <a href="#" class="hover:bg-[#f0f3f2]">Shop List - Filter</a>
+                                <a href="#" class="hover:bg-[#f0f3f2]">Shop - Filter</a>
+                                <a href="#" class="hover:bg-[#f0f3f2]">Shop Wide</a>
+                                <a href="#" class="hover:bg-[#f0f3f2]">Shop Single</a>
+                                <a href="#" class="hover:bg-[#f0f3f2]">Shop Single v2</a>
+                                <a href="#" class="hover:bg-[#f0f3f2]">Shop Wishlist</a>
+                                <a href="#" class="hover:bg-[#f0f3f2]">Shop Cart</a>
+                                <a href="#" class="hover:bg-[#f0f3f2]">Shop Checkout</a>
+                              </div>
+                            </li>
+                            <li class="border-b p-3" id="dropdown">
+                                <a href="#" onclick="toggleDropdown(3)" class="hover:text-[#0aad0a] flex flex-row justify-between hover:transition-all w-full">Stores
+                                 <i><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5c6c75"><path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/></svg></i></a>
+                                 <div id="dropdown-content-3" class="dropdowns-content">
+                                    <a href="#" class="hover:bg-[#f0f3f2]">Store List</a>
+                                    <a href="#" class="hover:bg-[#f0f3f2]">Store Grid</a>
+                                    <a href="#" class="hover:bg-[#f0f3f2]">Store Single</a>
+                                  </div>
+                                </li>
+                                <li class="border-b p-3" id="dropdown">
+                                    <a href="#" onclick="toggleDropdown(4)" class="hover:text-[#0aad0a] flex flex-row justify-between hover:transition-all w-full">Mega Menu
+                                     <i><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5c6c75"><path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/></svg></i></a>
+                                     <div id="dropdown-content-4" class="dropdowns-content">
+                                        <a href="#" onclick="toggleDropdown(5)" class="hover:bg-[#f0f3f2]">Dairy,Bread & Eggs
+                                            <i class="absolute right-0"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5c6c75"><path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/></svg></i>
+                                            <div id="dropdown-content-5" class="dropdowns-content">
+                                                <a href="#" class="hover:bg-[#f0f3f2]">Milk Drinks</a>
+                                                <a href="#" class="hover:bg-[#f0f3f2]">Curd & Yogurt</a>
+                                                <a href="#" class="hover:bg-[#f0f3f2]">Eggs</a>
+                                                <a href="#" class="hover:bg-[#f0f3f2]">Buns & Bakery</a>
+                                                <a href="#" class="hover:bg-[#f0f3f2]">Cheese</a>
+                                                <a href="#" class="hover:bg-[#f0f3f2]">Condensed Milk</a>
+                                                <a href="#" class="hover:bg-[#f0f3f2]">Dairy Products</a>
+                                            </div>
+                                        </a>
+                                        <a href="#" onclick="toggleDropdown(6)" class="hover:bg-[#f0f3f2]">Vegetables & Fruits
+                                            <i class="absolute right-0"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5c6c75"><path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/></svg></i>
+                                            <div id="dropdown-content-6" class="dropdowns-content">
+                                                <a href="#" class="hover:bg-[#f0f3f2]">Vegetables</a>
+                                                <a href="#" class="hover:bg-[#f0f3f2]">Fruits</a>
+                                                <a href="#" class="hover:bg-[#f0f3f2]">Exotics & Premium</a>
+                                                <a href="#" class="hover:bg-[#f0f3f2]">Fresh Sprouts</a>
+                                                <a href="#" class="hover:bg-[#f0f3f2]">Frozen Veg</a>
+                                            </div>
+                                        </a>
+                                        <a href="#" onclick="toggleDropdown(7)" class="hover:bg-[#f0f3f2]">Cold Drinks & Juices
+                                            <i class="absolute right-0"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5c6c75"><path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/></svg></i>
+                                            <div id="dropdown-content-7" class="dropdowns-content">
+                                                <a href="#" class="hover:bg-[#f0f3f2]">Soft Drinks</a>
+                                                <a href="#" class="hover:bg-[#f0f3f2]">Fruit Juices</a>
+                                                <a href="#" class="hover:bg-[#f0f3f2]">Coldpress</a>
+                                                <a href="#" class="hover:bg-[#f0f3f2]">Soda & Mixers</a>
+                                                <a href="#" class="hover:bg-[#f0f3f2]">Milk Drinks</a>
+                                                <a href="#" class="hover:bg-[#f0f3f2]">Health Drinks</a>
+                                            </div>
+                                        </a>
+                                      </div>
+                                    </li>
+                                    <li class="border-b p-3" id="dropdown">
+                                        <a href="#" onclick="toggleDropdown(8)" class="hover:text-[#0aad0a] flex flex-row justify-between hover:transition-all w-full">DOCS
+                                         <i><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5c6c75"><path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/></svg></i></a>
+                                         <div id="dropdown-content-8" class="dropdowns-content">
+                                            <a href="#" class="hover:bg-[#f0f3f2]">
+                                                <div class="flex flex-row  items-center">
+                                                <div>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="rgba(10,173,10)" class="bi bi-file-text text-primary" viewBox="0 0 16 16">
+                                                        <path d="M5 4a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1H5zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zM5 8a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1H5zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1H5z"></path>
+                                                        <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"></path>
+                                                    </svg>
+                                                </div>
+                                                <div class="ms-3 lh-1">
+                                                    <h6 class="mb-1 text-[#21313c] text-sm font-semibold">Documentations</h6>
+                                                    <p class="mb-0 text-[.875em]">Browse the all documentation</p>
+                                                </div>
+                                            </div>
+                                            </a>
+                                            <a href="#" class="hover:bg-[#f0f3f2]">
+                                                <div class="flex flex-row  items-center">
+                                                    <div>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="rgb(10,173,10)" class="bi bi-file-text text-primary" viewBox="0 0 16 16">
+                                                            <path d="M5 4a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1H5zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zM5 8a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1H5zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1H5z"></path>
+                                                            <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="ms-3 lh-1">
+                                                        <h6 class="mb-1 text-[#21313c] text-sm font-semibold">Changelog <span class="text-[rgb(10,173,10)]">v1.2.1</span></h6>
+                                                        <p class="mb-0 text-[.875em]">See what's new</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                          </div>
+                                        </li>
                         
                 </ul>
                 
@@ -229,18 +329,19 @@
 
     <!-- Map Modal Start-->
     <div class="modal" id="map-modal">
-        <div class="modal-content flex flex-col gap-6 ">
+        <div class="modal-content min-w-[420px] max-w-[420px] p-6 flex flex-col gap-6 ">
             <div class="flex justify-between items-center">
-                <h2 class="font-semibold text-base">Choose Your Delivery Location
-                    <span><p class="text-sm font-thin">Enter your address and we will specify the offer you area</p></span>
-                </h2>
+                <div class="flex flex-col">
+                <h5 class="font-semibold  text-[1.09375rem] leading-[1.2] ">Choose Your Delivery Location</h5>
+                <p class="text-[.875em] font-medium text-[#21313c]">Enter your address and we will specify the offer you area</p>
+            </div>
                <a href=""><span class="btn btn-close hover:rounded-sm hover:border-[#0aad0a] hover:outline-none hover:shadow-[0_0_0_0.25rem_rgba(10,173,10,.25)]" onclick="modal('login-modal')"></span></a>
             </div>
             <div class="flex flex-col ">
                 <input type="text" placeholder="Search your area" class=" mt-0 form-input focus:outline-none focus:border-[#85d685] focus:shadow-[0_0_0_0.25rem_rgba(10,173,10,.25)]">
                 <div class="flex flex-row justify-between mt-5 items-center">
                     <h3>Select Location</h3>
-                    <button class="btn border-solid border-gray-400 hover:bg-gray-300">Clear All</button>
+                    <button class="btn border-solid outline-gray-400 border-[#c1c7c6] hover:bg-[#c1c7c6] hover:border-[#c1c7c6] text-[#5c6c75bf]">Clear All</button>
                 </div>
                 <div class="flex flex-col overflow-auto mt-2 max-h-[300px]">
                     <div class=" hover:bg-gray-100">
@@ -305,5 +406,6 @@
 
 
     
+    <script src="app.js"></script>
 </body>
 </html>
