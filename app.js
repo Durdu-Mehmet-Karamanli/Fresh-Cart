@@ -32,20 +32,6 @@ function offCanvas(id){
     }
 }
 }
-function toggleDropdown(index) {
-  var dropdowns = document.querySelectorAll('[id^="dropdown-content-"]');
-  var currentDropdown = document.getElementById(`dropdown-content-${index}`);
-  dropdowns.forEach((dropdown) => {
-    if (dropdown!== currentDropdown) {
-      dropdown.style.display = "none";
-    }
-  });
-  if (currentDropdown.style.display === "block") {
-    currentDropdown.style.display = "none";
-  } else {
-    currentDropdown.style.display = "block";
-  }
-}
   const decrementButtons = document.querySelectorAll('.decrement');
 const incrementButtons = document.querySelectorAll('.increment');
 const valueInputs = document.querySelectorAll('.value');
@@ -66,4 +52,58 @@ incrementButtons.forEach((button, index) => {
         currentValue++;
         valueInputs[index].value = currentValue;
     });
+});
+
+
+const dropDownsList = document.querySelectorAll("[dropdown]");
+dropDownsList.forEach((dropdown) => {
+  dropdown.addEventListener('click', () => {
+    const drContent = dropdown.querySelector('.dropdowns-content');
+    dropDownsList.forEach((ahmet) => {
+      const content = ahmet.querySelector('.dropdowns-content');
+        if (drContent !== content) {
+          content.style.display = "none";
+        }
+    })
+    if (drContent.style.display === "block") {
+      drContent.style.display = "none";
+    } else {
+      drContent.style.display = "block";
+    }
+    event.stopPropagation();
+  })
+})
+
+
+const subDownsList = document.querySelectorAll("[subdropdown]");
+subDownsList.forEach((subDowns) => {
+  subDowns.addEventListener('click', () => {
+    const subdrContent = subDowns.querySelector('.subdropdowns-content');
+    subDownsList.forEach((selim) => {
+      const subcontent = selim.querySelector('.subdropdowns-content');
+        if (subdrContent !== subcontent) {
+          subcontent.style.display = "none";
+        }
+    })
+    if (subdrContent.style.display === "block") {
+      subdrContent.style.display = "none";
+    } else {
+      subdrContent.style.display = "block";
+    }
+    event.stopPropagation();
+  })
+})
+
+
+var swiper = new Swiper(".mySwiper", {
+  spaceBetween: 30,
+  centeredSlides: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  }
 });
