@@ -224,7 +224,6 @@
     font-size: 18px;
     background: #fff;
     display: flex;
-    justify-content: center;
     align-items: center;
     height: 500px;
   }
@@ -262,4 +261,19 @@
     background-repeat: no-repeat;
     border-radius: 0.5rem;
     width: 516px;
+  }
+  .bannerImg1{
+    background: url(bannerimg/ad-banner-1.jpg)0% 0% / cover no-repeat;;
+    background-position: center;
+    border-radius: 0.5rem;
+    height: 240px;
+    width: 100%;
+  }
+
+  .bannerImg2{
+    background: url(bannerimg/ad-banner-2.jpg)0% 0% / cover no-repeat;;
+    background-position: center;
+    border-radius: 0.5rem;
+    height: 240px;
+    width: 100%;
   }
