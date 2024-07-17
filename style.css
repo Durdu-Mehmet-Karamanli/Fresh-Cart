@@ -399,7 +399,7 @@
 }
 .active {
   background-color: var(--fc-nav-pills-link-active-bg);
-  color: var(--fc-nav-pills-link-active-color);
+  color: var(--fc-nav-pills-link-active-color) !important;
 }
 .card-product {
   cursor: pointer;
@@ -474,13 +474,13 @@
 }
 .card-btn {
   animation: slideUp 0.3s forwards;
-  animation-delay: 0.3s;
+  animation-delay: 0.1s;
   opacity: 0;
 }
 
-/* .card:hover .card-btn {
+ .card:hover .card-btn {
   animation: slideUp 0.3s forwards;
-} */
+} 
 .card-btn:hover {
   background-color: #088208;
 }
@@ -526,4 +526,25 @@
   width: 100%;
   height: 100%;
   background: url(images/pattern.svg);
+}
+.h2font{
+  font-size: calc(1.3rem + .6vw);
+}
+.h3font{
+  font-size: calc(1.27813rem + .3375vw);
+}
+.slick-prew{
+    background-color: #ecf0ef;
+    border: 1px solid #ecf0ef;
+    border-radius: 50px;
+    color: var(--fc-gray-500);
+    cursor: pointer;
+    flex-shrink: 0;
+    font-size: 20px;
+    font-size: 24px;
+    height: 32px;
+    width: 32px;
+}
+.card-shadow{
+  box-shadow: rgba(145,158,171,.2) 0px 2px 4px -1px,rgba(145,158,171,.14) 0px 4px 5px 0px,rgba(145,158,171,.12) 0px 1px 10px 0px;
 }

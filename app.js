@@ -109,7 +109,6 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 const navLinks = document.querySelectorAll('.nav-link');
-
 navLinks.forEach(function(navLink) {
   navLink.addEventListener('click', function(event) {
     navLinks.forEach(function(link) {
@@ -117,4 +116,17 @@ navLinks.forEach(function(navLink) {
     });
     event.target.classList.add('active');
   });
+});
+var swiper2 = new Swiper(".newswpier", {
+  slidesPerView: 4,
+      spaceBetween: 30,
+      freeMode: true, 
+  /*autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },*/ 
+  navigation: {
+    nextEl: ".next",
+    prevEl: ".prev",
+  },
 });
